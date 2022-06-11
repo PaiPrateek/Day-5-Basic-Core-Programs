@@ -6,21 +6,24 @@ namespace BasicCorePrograms
     {
         static void Main(string[] args)
         {
-            ComputeQuotientAndReminder();
+            SwapTwoNumber();
         }
-        public static void ComputeQuotientAndReminder()
+        public static void SwapTwoNumber()
         {
-            Console.WriteLine("Enter a Dividend:");
-            int x = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("........................");
-            Console.WriteLine("Enter a Divisor:");
-            int y = Convert.ToInt32(Console.ReadLine());
+            int temp = 0;
+            Console.WriteLine("Enter First Number");
+            int X = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("......................");
+            Console.WriteLine("Enter Second Number");
+            int Y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("......................");
+            Console.WriteLine("Before Swaping Two Number First Number is :{0} and Second Number is : {1}", X, Y);
 
-            int Quotient = x / y;
-            int Reminder = x % y;
+            X = Y;
+            Y = temp;
+            temp = Y;
+            Console.WriteLine("After Swaping Two Number FirstNumber is :{0} and Second Number is : {1}", X, temp);
 
-            Console.WriteLine("The Quotient is :{0}", Quotient);
-            Console.WriteLine("The Reminder is : {0}", Reminder);
         }
 
     }
